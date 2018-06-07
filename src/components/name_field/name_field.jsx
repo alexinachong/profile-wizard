@@ -15,6 +15,7 @@ class NameField extends React.Component {
         <h2>What is the child's <strong>name</strong>?</h2>
 
         <label>
+          <h4>First Name</h4>
           <input
             type="text"
             value={this.state.firstName}
@@ -25,8 +26,9 @@ class NameField extends React.Component {
             autoFocus
           />
         </label>
-        
+
         <label>
+          <h4>Last Name</h4>
           <input
             type="text"
             value={this.state.lastName}
