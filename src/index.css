@@ -1,5 +1,13 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.form-buttons {
+  background-color: #ff8f32;
+  border: solid 1px #e26e17;
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 6px 60px;
 }
