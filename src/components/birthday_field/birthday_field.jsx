@@ -14,7 +14,7 @@ class BirthdayField extends React.Component {
   render() {
     return (
       <div className="birthday-field-container">
-        <h2>When is {}s birthday?</h2>
+        <h2>When is {this.props.profiles.name}s <strong>birthday</strong>?</h2>
 
         <label>
           <input
@@ -28,7 +28,7 @@ class BirthdayField extends React.Component {
           />
         </label>
       </div>
-    )
+    );
   }
 
 }
