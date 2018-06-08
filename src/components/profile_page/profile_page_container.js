@@ -1,18 +1,18 @@
 import { connect } from 'react-redux';
 // import actions
-import { goToNextPage } from '../../actions/profile_actions';
+import { incrementPageNum } from '../../actions/profile_actions';
 import ProfilePage from './profile_page';
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    profiles: state.profiles
 
   };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    // check this
-    // goToNextPage: () => dispatch(goToNextPage())
+    incrementPageNum: () => dispatch(incrementPageNum())
 
   };
 };

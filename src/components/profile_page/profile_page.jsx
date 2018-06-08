@@ -7,7 +7,10 @@ import RelationshipFieldContainer from '../relationship_field/relationship_field
 class ProfilePage extends React.Component {
   constructor(props) {
     super(props);
-    // this.state?
+    this.state = {
+      pageNum: 0,
+      components: [<NameFieldContainer />, <BirthdayFieldContainer />, <GenderFieldContainer />, <RelationshipFieldContainer />]
+    };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     // other methods?
@@ -15,27 +18,26 @@ class ProfilePage extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    if (this.state.pageNum < 3) {
+      console.log(this.state.pageNum);
+      this.setState({pageNum: this.state.pageNum + 1});
+      this.props.incrementPageNum();
+    } else {
+      // submit info
+      this.setState({pageNum: 0});
+    }
     // call action to advance to next page
     // if fields are not empty:
     // this.props.goToNextPage();
   }
 
-  // method to determine what page to display
-
   render() {
     return (
       <div className="profile-page-container">
-        <form onSubmit={this.handleSubmit} className="profile-form">
-          <h1>Name -> Birthday -> Gender -> Relationship</h1>
 
-          <NameFieldContainer />
-          <BirthdayFieldContainer />
-          <GenderFieldContainer />
-          <RelationshipFieldContainer />
+        {this.state.components[this.state.pageNum]}
 
-
-          <input type="submit" value="Next >>" className="form-buttons" />
-        </form>
+        <button onClick={this.handleSubmit} className="form-buttons">Next >></button>
       </div>
     );
   }
