@@ -16,6 +16,8 @@ class BirthdayField extends React.Component {
       <div className="birthday-field-container">
         <h2>When is {this.props.profiles.name}s <strong>birthday</strong>?</h2>
 
+        <img src="https://icdn.kiwicrate.com/site/account/punchcard/onboarding/letscelebrate.png" />
+
         <label>
           <input
             type="date"
