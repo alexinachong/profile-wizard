@@ -1,9 +1,10 @@
-export const ADD_NAME = 'ADD_NAME';
+export const INCREMENT_PAGE_NUM = 'INCREMENT_PAGE_NUM';
+
+export const ADD_FIRST_NAME = 'ADD_FIRST_NAME';
+export const ADD_LAST_NAME = 'ADD_LAST_NAME';
 export const ADD_BIRTHDAY = 'ADD_BIRTHDAY';
 export const ADD_GENDER = 'ADD_GENDER';
 export const ADD_RELATIONSHIP = 'ADD_RELATIONSHIP';
-
-export const INCREMENT_PAGE_NUM = 'INCREMENT_PAGE_NUM';
 
 let currentPage = 0;
 
@@ -13,9 +14,14 @@ export const incrementPageNum = () => ({
 });
 
 
-export const addName = name => ({
-  type: ADD_NAME,
-  name: name
+export const addFirstName = firstName => ({
+  type: ADD_FIRST_NAME,
+  firstName: firstName
+});
+
+export const addLastName = lastName => ({
+  type: ADD_LAST_NAME,
+  lastName: lastName
 });
 
 export const addBirthday = birthday => ({
@@ -32,5 +38,3 @@ export const addRelationship = relationship => ({
   type: ADD_RELATIONSHIP,
   relationship: relationship
 });
-
-// add action to keep track of current page - check this
