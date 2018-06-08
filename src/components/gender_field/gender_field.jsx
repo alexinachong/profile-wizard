@@ -12,11 +12,11 @@ class GenderField extends React.Component {
   render() {
     return (
       <div className="gender-field-container">
-        <h2>Select {this.props.profiles.name}s <strong>gender</strong>:</h2>
+        <h2>Select this.props.profiles.names <strong>gender</strong>:</h2>
 
         <div className="gender-field-options-container">
-          <img src="./boy.jpg" className="gender-field-options" />
-          <img src="./girl.jpg" className="gender-field-options" />
+          <img src="http://icdn.kiwicrate.com/site/account/gender-boy.png" className="gender-field-options" />
+          <img src="http://icdn.kiwicrate.com/site/account/gender-girl.png" className="gender-field-options" />
         </div>
       </div>
     );
