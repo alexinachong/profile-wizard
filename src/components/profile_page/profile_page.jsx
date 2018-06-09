@@ -19,7 +19,6 @@ class ProfilePage extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     if (this.state.pageNum < 3) {
-      console.log(this.state.pageNum);
       this.setState({pageNum: this.state.pageNum + 1});
       this.props.incrementPageNum();
     } else {

@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-// import actions
 import { incrementPageNum } from '../../actions/profile_actions';
 import ProfilePage from './profile_page';
 
