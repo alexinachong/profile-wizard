@@ -6,34 +6,22 @@ const profilesReducer = (state = {}, action) => {
 
   switch(action.type) {
     case INCREMENT_PAGE_NUM:
-      let newProfilePage = {};
-      newProfilePage[action.pageNum] = {pageNum: action.pageNum};
-      return merge({}, state, newProfilePage);
+      return merge({}, state, {["pageNum"]: action.pageNum});
 
     case ADD_FIRST_NAME:
-      let newFirstName = {};
-      newFirstName[action.firstName] = {firstName: action.firstName};
-      return merge({}, state, newFirstName);
+      return merge({}, state, {["firstName"]: action.firstName});
 
     case ADD_LAST_NAME:
-      let newLastName = {};
-      newLastName[action.lastName] = {lastName: action.lastName};
-      return merge({}, state, newLastName);
+      return merge({}, state, {["lastName"]: action.lastName});
 
     case ADD_BIRTHDAY:
-      let newBirthday = {};
-      newBirthday[action.birthday] = {birthday: action.birthday};
-      return merge({}, state, newBirthday);
+      return merge({}, state, {["birthday"]: action.birthday});
 
     case ADD_GENDER:
-      let newGender = {};
-      newGender[action.gender] = {gender: action.gender};
-      return merge({}, state, newGender);
+      return merge({}, state, {["gender"]: action.gender});
 
     case ADD_RELATIONSHIP:
-      let newRelationship = {};
-      newRelationship[action.relationship] = {gender: action.relationship};
-      return merge({}, state, newRelationship);
+      return merge({}, state, {["relationship"]: action.relationship});
 
     default:
       return state;
