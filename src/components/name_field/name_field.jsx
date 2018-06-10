@@ -7,6 +7,7 @@ class NameField extends React.Component {
       firstName: '',
       lastName: ''
     };
+
   }
 
   update(field) {
@@ -14,6 +15,11 @@ class NameField extends React.Component {
       this.setState({
         [field]: e.currentTarget.value
       });
+  }
+
+  componentWillUnmount() {
+    this.props.addFirstName(this.state.firstName);
+    this.props.addLastName(this.state.lastName);
   }
 
   render() {
