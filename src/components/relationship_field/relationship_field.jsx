@@ -8,6 +8,7 @@ class RelationshipField extends React.Component {
     };
 
     this.genderPronoun = this.genderPronoun.bind(this);
+    this.renderSpecificGenderOptions = this.renderSpecificGenderOptions.bind(this);
   }
 
   update(field) {
@@ -31,60 +32,84 @@ class RelationshipField extends React.Component {
     return pronoun;
   }
 
-  render() {
-    return (
-      <div className="relationship-field-container">
-        <h2>What is {this.genderPronoun(this.props.profiles.gender)} <strong>relationship</strong> to you?</h2>
-
+  renderSpecificGenderOptions(gender) {
+    if (gender === "male") {
+      return (
         <div className="relationship-field-options-container">
           <label>
             <input type="radio" id="relationship-option-1"
               name="relationship" value="son" />
-              Son
-          </label>
-
-          <label>
-            <input type="radio" id="relationship-option-2"
-              name="relationship" value="daughter" />
-              Daughter
+              <span>Son</span>
           </label>
 
           <label>
             <input type="radio" id="relationship-option-3"
               name="relationship" value="family-friend" />
-              Family Friend
+              <span>Family Friend</span>
           </label>
 
           <label>
             <input type="radio" id="relationship-option-4"
               name="relationship" value="grandson" />
-              Grandson
-          </label>
-
-          <label>
-            <input type="radio" id="relationship-option-5"
-              name="relationship" value="granddaughter" />
-              Granddaughter
+              <span>Grandson</span>
           </label>
 
           <label>
             <input type="radio" id="relationship-option-6"
               name="relationship" value="other" />
-              Other
+              <span>Other</span>
           </label>
 
           <label>
             <input type="radio" id="relationship-option-7"
               name="relationship" value="nephew" />
-              Nephew
+              <span>Nephew</span>
+          </label>
+        </div>
+      );
+    } else {
+      return (
+        <div className="relationship-field-options-container">
+          <label>
+            <input type="radio" id="relationship-option-2"
+              name="relationship" value="daughter" />
+              <span>Daughter</span>
+          </label>
+
+          <label>
+            <input type="radio" id="relationship-option-3"
+              name="relationship" value="family-friend" />
+              <span>Family Friend</span>
+          </label>
+
+          <label>
+            <input type="radio" id="relationship-option-5"
+              name="relationship" value="granddaughter" />
+              <span>Granddaughter</span>
+          </label>
+
+          <label>
+            <input type="radio" id="relationship-option-6"
+              name="relationship" value="other" />
+              <span>Other</span>
           </label>
 
           <label>
             <input type="radio" id="relationship-option-8"
               name="relationship" value="niece" />
-              Niece
+              <span>Niece</span>
           </label>
         </div>
+      );
+    }
+  }
+
+  render() {
+    return (
+      <div className="relationship-field-container">
+        <h2>What is {this.genderPronoun(this.props.profiles.gender)} <strong>relationship</strong> to you?</h2>
+
+        {this.renderSpecificGenderOptions(this.props.profiles.gender)}
 
       </div>
     );
