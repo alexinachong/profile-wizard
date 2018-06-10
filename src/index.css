@@ -29,6 +29,10 @@ body {
   width: 400px;
 }
 
+.relationship-field-options-container label span {
+  padding-left: 10px;
+}
+
 .profile-input {
   font-size: 14px;
   padding: 10px 12px;
@@ -36,6 +40,34 @@ body {
   line-height: 1.5em;
   color: #666666;
   width: 300px;
+}
+
+.gender-field-options {
+  background-color: #ffffff;
+}
+
+.gender-field-options-container {
+  display: flex;
+}
+
+.gender-field-options-container label {
+  margin: 20px;
+}
+
+.gender-field-options-container label > input[type="radio"] { /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+
+.gender-field-options-container label > input[type="radio"] + img { /* IMAGE STYLES */
+  cursor: pointer;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+
+.gender-field-options-container label > input[type="radio"]:checked + img { /* (RADIO CHECKED) IMAGE STYLES */
+  border: 1px solid #00bebe;
+  box-shadow: 0 0 10px #00bebe;
 }
 
 /*  FIX: h2 CSS so only keyword is bolded */
