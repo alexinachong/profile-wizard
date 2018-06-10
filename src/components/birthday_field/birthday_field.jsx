@@ -18,10 +18,14 @@ class BirthdayField extends React.Component {
       });
   }
 
+  componentWillUnmount() {
+    this.props.addBirthday(this.state.birthday);
+  }
+
   render() {
     return (
       <div className="birthday-field-container">
-        <h2>When is this.props.profiles.names <strong>birthday</strong>?</h2>
+        <h2>When is {this.props.profiles.firstName}&#x27;s <strong>birthday</strong>?</h2>
 
         <img src="https://icdn.kiwicrate.com/site/account/punchcard/onboarding/letscelebrate.png" />
 
