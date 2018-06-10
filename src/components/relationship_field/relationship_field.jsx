@@ -4,15 +4,37 @@ class RelationshipField extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // what is default relationship?
-      // relationship: ''
+      relationship: ''
     };
+
+    this.genderPronoun = this.genderPronoun.bind(this);
+  }
+
+  update(field) {
+    return e =>
+      this.setState({
+        [field]: e.currentTarget.value
+      });
+  }
+
+  componentWillUnmount() {
+    this.props.addRelationship(this.state.relationship);
+  }
+
+  genderPronoun(gender) {
+    let pronoun = "";
+    if (gender === "male") {
+      pronoun = "his";
+    } else {
+      pronoun = "her";
+    }
+    return pronoun;
   }
 
   render() {
     return (
       <div className="relationship-field-container">
-        <h2>What is this.props.profiles.gender <strong>relationship</strong> to you?</h2>
+        <h2>What is {this.genderPronoun(this.props.profiles.gender)} <strong>relationship</strong> to you?</h2>
 
         <div className="relationship-field-options-container">
           <label>
