@@ -67,7 +67,6 @@ h2 {
   .container {
     width: 90%;
     margin: 0 auto;
-    border: 1px solid orange;
   }
 
   #last-name-input {
@@ -164,7 +163,6 @@ h2 {
   .container {
     width: 80%;
     margin: 0 auto;
-    border: 1px solid green;
   }
 
   .name-field-container,
@@ -246,7 +244,6 @@ h2 {
   .container {
     width: 80%;
     margin: 0 auto;
-    border: 1px solid green;
   }
 
   .profile-input {
