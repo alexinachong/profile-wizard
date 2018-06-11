@@ -13,7 +13,7 @@ class ProfilePage extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    // other methods?
+    this.displayButtonText = this.displayButtonText.bind(this);
   }
 
   handleSubmit(e) {
@@ -22,12 +22,23 @@ class ProfilePage extends React.Component {
       this.setState({pageNum: this.state.pageNum + 1});
       this.props.incrementPageNum();
     } else {
-      // submit info
-      this.setState({pageNum: 0});
+      this.setState({
+        pageNum: 0,
+        firstName: '',
+        lastName: '',
+        birthday: '',
+        gender: '',
+        relationship: ''
+      });
     }
-    // call action to advance to next page
-    // if fields are not empty:
-    // this.props.goToNextPage();
+  }
+
+  displayButtonText() {
+    let buttonText = 'Next >>';
+    if (this.state.pageNum === 3) {
+      buttonText = 'Done!';
+    }
+    return buttonText;
   }
 
   render() {
@@ -36,7 +47,7 @@ class ProfilePage extends React.Component {
 
         {this.state.components[this.state.pageNum]}
 
-        <button onClick={this.handleSubmit} className="form-buttons">Next >></button>
+        <button onClick={this.handleSubmit} className="form-buttons">{this.displayButtonText()}</button>
       </div>
     );
   }

@@ -1,14 +1,44 @@
-body {
+/* CSS RESET */
+html, body, div, span, h1, h2, h3, h4, a, ol, ul, li, form, label, article, aside, figure, figcaption, footer, header, nav {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1.5;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  width: 100%
+}
+
+/* STYLE BEGINS BELOW */
+
+body {
+  margin: 0 auto;
   padding: 0;
   font-family: 'Roboto Condensed', sans-serif;
   background-color: #f7f7f7;
 }
 
-.container {
+h2 {
+  font-size: 1.5em;
+  padding: 20px 0px;
+}
+
+/* .container {
   width: 80%;
   margin: 0 auto;
-}
+  border: 1px solid green;
+} */
 
 .form-buttons {
   background-color: #ff8f32;
@@ -70,4 +100,176 @@ body {
   box-shadow: 0 0 10px #00bebe;
 }
 
-/*  FIX: h2 CSS so only keyword is bolded */
+/* Phone only */
+@media (max-width:599px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid orange;
+  }
+
+  #last-name-input {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  #last-name-input h4 {
+    align-self: flex-start;
+    padding-left: 12px;
+  }
+
+  .profile-input {
+    font-size: 12px;
+    padding: 10px 12px;
+    border: 1px solid #dddddd;
+    line-height: 1.5em;
+    color: #666666;
+    width: 75%;
+  }
+
+  .form-buttons {
+    width: 304px;
+    background-color: #ff8f32;
+    border: solid 1px #e26e17;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 6px 60px;
+    margin: 30px 0px;
+  }
+
+
+  h4 {
+    font-weight: bold;
+    font-size: 0.85em;
+    padding-bottom: 5px;
+  }
+}
+
+/* Phone and Tablet Portrait */
+@media (max-width:899px) {
+  .profile-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .name-field-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .name-inner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .name-labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+}
+
+/* Tablet Portrait Only */
+@media (min-width:600px) and (max-width:899px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid green;
+  }
+
+  .name-field-container {
+    width: 90%;
+  }
+
+  .name-inner-container {
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid blue;
+  }
+
+  #last-name-input {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  #last-name-input h4 {
+    align-self: flex-start;
+    margin-left: -5px;
+  }
+
+  .name-labels {
+    width: 45%;
+  }
+
+  .profile-input {
+    font-size: 12px;
+    padding: 10px 12px;
+    border: 1px solid #dddddd;
+    line-height: 1.5em;
+    color: #666666;
+    width: 90%;
+  }
+
+  .form-buttons {
+    width: 450px;
+    background-color: #ff8f32;
+    border: solid 1px #e26e17;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 6px 60px;
+    margin: 30px 0px;
+  }
+
+  h4 {
+    font-weight: bold;
+    font-size: 1em;
+    padding-bottom: 5px;
+  }
+
+}
+
+/* Tablet Landscape and Up */
+@media (min-width:900px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid green;
+  }
+
+  .profile-input {
+    font-size: 12px;
+    padding: 10px 12px;
+    border: 1px solid #dddddd;
+    line-height: 1.5em;
+    color: #666666;
+    width: 400px;
+    margin-bottom: 25px;
+  }
+
+  .form-buttons {
+    width: 425px;
+    background-color: #ff8f32;
+    border: solid 1px #e26e17;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 6px 60px;
+    margin: 30px 0px;
+  }
+
+  h4 {
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+}
+
+/* Desktop and Up */
+@media (min-width:1200px) {
+
+}
