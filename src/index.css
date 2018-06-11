@@ -49,19 +49,7 @@ h2 {
   margin: 30px 0px;
 }
 
-.relationship-field-options-container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 800px;
-}
 
-.relationship-field-options-container label {
-  width: 400px;
-}
-
-.relationship-field-options-container label span {
-  padding-left: 10px;
-}
 
 .profile-input {
   font-size: 14px;
@@ -142,6 +130,22 @@ h2 {
     padding-bottom: 20px;
   }
 
+  .relationship-field-options-container {
+    border: 1px solid yellow;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+  }
+
+  .relationship-field-options-container label {
+    width: 150px;
+    padding-bottom: 10px;
+  }
+
+  .relationship-field-options-container label span {
+    padding-left: 5px;
+  }
+
   h4 {
     font-weight: bold;
     font-size: 0.85em;
@@ -179,6 +183,8 @@ h2 {
     flex-direction: column;
     justify-content: space-between;
   }
+
+
 
 }
 
@@ -286,6 +292,20 @@ h2 {
   .birthday-field-container img {
     width: 400px;
     padding-bottom: 40px;
+  }
+
+  .relationship-field-options-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+  }
+
+  .relationship-field-options-container label {
+    width: 400px;
+  }
+
+  .relationship-field-options-container label span {
+    padding-left: 10px;
   }
 
   h4 {
